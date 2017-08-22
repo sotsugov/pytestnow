@@ -11,8 +11,12 @@ def test_hello_full_name():
     assert hello_name("john doe") == "hello john doe"
 
 
-def test_hello_none():
+def test_hello_empty():
     assert hello_name("") == "hello "
+
+
+def test_hello_none():
+    assert hello_name() == "hello world"
 
 
 def test_hello_numbers():
@@ -21,7 +25,6 @@ def test_hello_numbers():
 
 def test_hello_unicode():
     assert hello_name("🍩") == "hello 🍩"
-
 
 if __name__ == '__main__':
     pytest.main([__file__])
